@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RBProject version="2019r1.1" FormatVersion="2" MinIDEVersion="20070100">
+<block type="Project" ID="0">
+ <ProjectSavedInVers>2019.011</ProjectSavedInVers>
+ <MajorVersion>1</MajorVersion>
+ <MinorVersion>0</MinorVersion>
+ <SubVersion>0</SubVersion>
+ <Release>0</Release>
+ <NonRelease>0</NonRelease>
+ <Region></Region>
+ <ShortVersion></ShortVersion>
+ <LongVersion></LongVersion>
+ <InfoVersion></InfoVersion>
+ <AutoIncVersion>0</AutoIncVersion>
+ <DefaultViewID>44965887</DefaultViewID>
+ <ProjectType>0</ProjectType>
+ <DefaultLanguage>0</DefaultLanguage>
+ <CurrentLanguage>0</CurrentLanguage>
+ <DefaultEncoding>0</DefaultEncoding>
+ <BuildFlags>18688</BuildFlags>
+ <UseBuildsFolder>1</UseBuildsFolder>
+ <WebApp>0</WebApp>
+ <Icon>
+ </Icon>
+ <MacCreator></MacCreator>
+ <BuildCarbonMachOName>My Application</BuildCarbonMachOName>
+ <BundleIdentifier>com.eugenedakin.myapp</BundleIdentifier>
+ <WinMDICaption></WinMDICaption>
+ <BuildWinName>My Application.exe</BuildWinName>
+ <BuildWinMDI>0</BuildWinMDI>
+ <BuildWinCompanyName>Eugene Dakin</BuildWinCompanyName>
+ <BuildWinProductName></BuildWinProductName>
+ <BuildWinInternalName></BuildWinInternalName>
+ <BuildWinFileDescription></BuildWinFileDescription>
+ <UseGDIPlus>0</UseGDIPlus>
+ <HiDPI>1</HiDPI>
+ <DarkMode>1</DarkMode>
+ <BuildLinuxX86Name>MyApplication</BuildLinuxX86Name>
+ <DebuggerCommandLine></DebuggerCommandLine>
+ <LinuxArchitecture>1</LinuxArchitecture>
+ <OptimizationLevel>0</OptimizationLevel>
+ <CopyWindowsRedist>0</CopyWindowsRedist>
+ <WindowsVersions>{35138b9a-5d96-4fbd-8e2d-a2440225f93a}|{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}|{1f676c76-80e1-4239-95bb-83d0f6d0da78}|{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}</WindowsVersions>
+ <WindowsRunAs>0</WindowsRunAs>
+</block>
+<block type="Module" ID="326920191">
+ <ObjName>App</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>1</IsClass>
+ <Superclass>Application</Superclass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <IsApplicationObject>1</IsApplicationObject>
+ <Compatibility></Compatibility>
+ <PropertyVal Name="MenuBar">918491135</PropertyVal>
+ <ViewBehavior>
+ </ViewBehavior>
+ <Constant>
+  <ItemName>kFileQuitShortcut</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>688723967</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>0</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>1</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Cmd+Q</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>5</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Ctrl+Q</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kFileQuit</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>622743551</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef>&amp;Quit</ItemDef>
+  <ItemFlags>0</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>2</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>E&amp;xit</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kEditClear</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1891833855</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef>&amp;Delete</ItemDef>
+  <ItemFlags>0</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>2</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>&amp;Delete</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>5</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>&amp;Delete</ItemDef>
+  </ConstantInstance>
+ </Constant>
+</block>
+<block type="Window" ID="44965887">
+ <ObjName>Window1</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>1</IsClass>
+ <Superclass>Window</Superclass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <Method>
+  <ItemName>DrawArrow</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1142720511</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub DrawArrow(g as Graphics, FromX as double, FromY as double, ToX as double, ToY as Double, AThickness as Integer, AColour as Color)</SourceLine>
+   <SourceLine>Dim HeadLength as Double = 10</SourceLine>
+   <SourceLine>Dim Pi as Double = 3.1415926</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//Set the arrow properties</SourceLine>
+   <SourceLine>Dim Angle as Double = ATan2(ToY-FromY,ToX-FromX)</SourceLine>
+   <SourceLine>g.ForeColor = AColour</SourceLine>
+   <SourceLine>g.PenHeight = AThickness</SourceLine>
+   <SourceLine>g.PenWidth = AThickness</SourceLine>
+   <SourceLine>g.DrawLine(FromX, FromY,ToX, ToY)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>//Add the two lines for the arrowhead</SourceLine>
+   <SourceLine>g.DrawLine(ToX, ToY, ToX-HeadLength*Cos(Angle-Pi/7), ToY-HeadLength*Sin(Angle-Pi/7))</SourceLine>
+   <SourceLine>g.DrawLine(ToX, ToY, ToX-HeadLength*Cos(Angle+Pi/7), ToY-HeadLength*Sin(Angle+Pi/7))</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>g as Graphics, FromX as double, FromY as double, ToX as double, ToY as Double, AThickness as Integer, AColour as Color</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <PropertyVal Name="MenuBarVisible">True</PropertyVal>
+ <PropertyVal Name="MenuBar">918491135</PropertyVal>
+ <PropertyVal Name="Backdrop">0</PropertyVal>
+ <PropertyVal Name="BackColor">16777215</PropertyVal>
+ <PropertyVal Name="HasBackColor">False</PropertyVal>
+ <PropertyVal Name="Visible">True</PropertyVal>
+ <PropertyVal Name="Placement">0</PropertyVal>
+ <PropertyVal Name="LiveResize">True</PropertyVal>
+ <PropertyVal Name="ImplicitInstance">True</PropertyVal>
+ <PropertyVal Name="FullScreen">False</PropertyVal>
+ <PropertyVal Name="MacProcID">0</PropertyVal>
+ <PropertyVal Name="Composite">False</PropertyVal>
+ <PropertyVal Name="FullScreenButton">False</PropertyVal>
+ <PropertyVal Name="MinimizeButton">True</PropertyVal>
+ <PropertyVal Name="MaximizeButton">True</PropertyVal>
+ <PropertyVal Name="Resizeable">True</PropertyVal>
+ <PropertyVal Name="CloseButton">True</PropertyVal>
+ <PropertyVal Name="Title">Arrow Demo</PropertyVal>
+ <PropertyVal Name="Frame">0</PropertyVal>
+ <PropertyVal Name="MaxHeight">32000</PropertyVal>
+ <PropertyVal Name="MaxWidth">32000</PropertyVal>
+ <PropertyVal Name="MinHeight">64</PropertyVal>
+ <PropertyVal Name="MinWidth">64</PropertyVal>
+ <PropertyVal Name="Height">300</PropertyVal>
+ <PropertyVal Name="Width">400</PropertyVal>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>String</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Interfaces</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>String</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>String</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Width</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Size</PropertyGroup>
+   <PropertyValue>600</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Height</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Size</PropertyGroup>
+   <PropertyValue>400</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MinWidth</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Size</PropertyGroup>
+   <PropertyValue>64</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MinHeight</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Size</PropertyGroup>
+   <PropertyValue>64</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MaxWidth</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Size</PropertyGroup>
+   <PropertyValue>32000</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MaxHeight</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Size</PropertyGroup>
+   <PropertyValue>32000</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Frame</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Frame</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+   <EditorType>Enum</EditorType>
+   <Enumeration>
+    <ItemDef>0 - Document</ItemDef>
+    <ItemDef>1 - Movable Modal</ItemDef>
+    <ItemDef>2 - Modal Dialog</ItemDef>
+    <ItemDef>3 - Floating Window</ItemDef>
+    <ItemDef>4 - Plain Box</ItemDef>
+    <ItemDef>5 - Shadowed Box</ItemDef>
+    <ItemDef>6 - Rounded Window</ItemDef>
+    <ItemDef>7 - Global Floating Window</ItemDef>
+    <ItemDef>8 - Sheet Window</ItemDef>
+    <ItemDef>9 - Metal Window</ItemDef>
+    <ItemDef>11 - Modeless Dialog</ItemDef>
+   </Enumeration>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Title</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Frame</PropertyGroup>
+   <PropertyValue>Untitled</PropertyValue>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>CloseButton</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Frame</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+   <EditorType>Boolean</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Resizeable</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Frame</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+   <EditorType>Boolean</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MaximizeButton</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Frame</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+   <EditorType>Boolean</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MinimizeButton</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Frame</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+   <EditorType>Boolean</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>FullScreenButton</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Frame</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+   <EditorType>Boolean</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Composite</ObjName>
+   <PropertyGroup>OS X (Carbon)</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MacProcID</ObjName>
+   <PropertyGroup>OS X (Carbon)</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>FullScreen</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+   <EditorType>Boolean</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>ImplicitInstance</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+   <EditorType>Boolean</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>LiveResize</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+   <EditorType>Boolean</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Placement</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+   <EditorType>Enum</EditorType>
+   <Enumeration>
+    <ItemDef>0 - Default</ItemDef>
+    <ItemDef>1 - Parent Window</ItemDef>
+    <ItemDef>2 - Main Screen</ItemDef>
+    <ItemDef>3 - Parent Window Screen</ItemDef>
+    <ItemDef>4 - Stagger</ItemDef>
+   </Enumeration>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Visible</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+   <EditorType>Boolean</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>HasBackColor</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Background</PropertyGroup>
+   <PropertyValue>False</PropertyValue>
+   <ItemType>Boolean</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>BackColor</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Background</PropertyGroup>
+   <PropertyValue>&amp;hFFFFFF</PropertyValue>
+   <ItemType>Color</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Backdrop</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Background</PropertyGroup>
+   <ItemType>Picture</ItemType>
+   <EditorType>Picture</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MenuBar</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Menus</PropertyGroup>
+   <ItemType>MenuBar</ItemType>
+   <EditorType>MenuBar</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>MenuBarVisible</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Deprecated</PropertyGroup>
+   <PropertyValue>True</PropertyValue>
+   <ItemType>Boolean</ItemType>
+   <EditorType>Boolean</EditorType>
+  </ViewProperty>
+ </ViewBehavior>
+ <ControlBehavior>
+  <Superclass>Canvas</Superclass>
+  <HookInstance>
+   <ItemName>Paint</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>1302667263</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Paint(g As Graphics, areas() As REALbasic.Rect)</SourceLine>
+    <SourceLine>//Draw an arrow</SourceLine>
+    <SourceLine>//g is graphics, FromX and FromY are the starting coordinates of the arrow</SourceLine>
+    <SourceLine>//ToX and ToY are the arrow end points</SourceLine>
+    <SourceLine>//AThickness is the arrow thickness</SourceLine>
+    <SourceLine>//AColour is the arrow colour</SourceLine>
+    <SourceLine>DrawArrow(g,100, 100, 5, 5, 2, &amp;c11CCDD)</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+ <Control>
+  <ControlClass>Canvas</ControlClass>
+  <ItemName>Canvas</ItemName>
+  <PropertyVal Name="InitialParent"></PropertyVal>
+  <PropertyVal Name="Transparent">True</PropertyVal>
+  <PropertyVal Name="EraseBackground">True</PropertyVal>
+  <PropertyVal Name="DoubleBuffer">False</PropertyVal>
+  <PropertyVal Name="AcceptTabs">False</PropertyVal>
+  <PropertyVal Name="AcceptFocus">False</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="UseFocusRing">True</PropertyVal>
+  <PropertyVal Name="HelpTag"></PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Backdrop">0</PropertyVal>
+  <PropertyVal Name="AutoDeactivate">True</PropertyVal>
+  <PropertyVal Name="TabStop">True</PropertyVal>
+  <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+  <PropertyVal Name="TabIndex">0</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="Height">300</PropertyVal>
+  <PropertyVal Name="Width">400</PropertyVal>
+  <PropertyVal Name="Top">0</PropertyVal>
+  <PropertyVal Name="Left">0</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">Canvas</PropertyVal>
+  <PropertyVal Name="Index">-2147483648</PropertyVal>
+  <PropertyVal Name="Name">Canvas1</PropertyVal>
+  <ControlIndex>0</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>905324543</PartID>
+ </Control>
+</block>
+<block type="Menu" ID="918491135">
+ <ObjName>MainMenuBar</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <MenuItem>
+  <ItemSpecialMenu>0</ItemSpecialMenu>
+  <ItemName>FileMenu</ItemName>
+  <ItemText>&amp;File</ItemText>
+  <ItemIndex>-2147483648</ItemIndex>
+  <ItemShortcut></ItemShortcut>
+  <MenuAutoEnable>1</MenuAutoEnable>
+  <TextEncoding>134217984</TextEncoding>
+  <MenuItemVisible>1</MenuItemVisible>
+  <ItemFlags>0</ItemFlags>
+  <Superclass>MenuItem</Superclass>
+  <MenuItem>
+   <ItemSpecialMenu>0</ItemSpecialMenu>
+   <ItemName>FileQuit</ItemName>
+   <ItemText>#App.kFileQuit</ItemText>
+   <ItemIndex>-2147483648</ItemIndex>
+   <ItemShortcut>#App.kFileQuitShortcut</ItemShortcut>
+   <MenuShortcut>#App.kFileQuitShortcut</MenuShortcut>
+   <MenuAutoEnable>1</MenuAutoEnable>
+   <TextEncoding>134217984</TextEncoding>
+   <MenuItemVisible>1</MenuItemVisible>
+   <ItemFlags>0</ItemFlags>
+   <Superclass>QuitMenuItem</Superclass>
+  </MenuItem>
+ </MenuItem>
+ <MenuItem>
+  <ItemSpecialMenu>0</ItemSpecialMenu>
+  <ItemName>EditMenu</ItemName>
+  <ItemText>&amp;Edit</ItemText>
+  <ItemIndex>-2147483648</ItemIndex>
+  <ItemShortcut></ItemShortcut>
+  <MenuAutoEnable>1</MenuAutoEnable>
+  <TextEncoding>134217984</TextEncoding>
+  <MenuItemVisible>1</MenuItemVisible>
+  <ItemFlags>0</ItemFlags>
+  <Superclass>MenuItem</Superclass>
+  <MenuItem>
+   <ItemSpecialMenu>0</ItemSpecialMenu>
+   <ItemName>EditUndo</ItemName>
+   <ItemText>&amp;Undo</ItemText>
+   <ItemIndex>-2147483648</ItemIndex>
+   <ItemShortcut>Cmd+Z</ItemShortcut>
+   <MenuShortcut>Z</MenuShortcut>
+   <MenuShortcutModifier>1</MenuShortcutModifier>
+   <MenuAutoEnable>1</MenuAutoEnable>
+   <TextEncoding>134217984</TextEncoding>
+   <MenuItemVisible>1</MenuItemVisible>
+   <ItemFlags>0</ItemFlags>
+   <Superclass>MenuItem</Superclass>
+  </MenuItem>
+  <MenuItem>
+   <ItemSpecialMenu>0</ItemSpecialMenu>
+   <ItemName>EditSeparator1</ItemName>
+   <ItemText>-</ItemText>
+   <ItemIndex>-2147483648</ItemIndex>
+   <ItemShortcut></ItemShortcut>
+   <MenuAutoEnable>1</MenuAutoEnable>
+   <TextEncoding>134217984</TextEncoding>
+   <MenuItemVisible>1</MenuItemVisible>
+   <ItemFlags>0</ItemFlags>
+   <Superclass>MenuItem</Superclass>
+  </MenuItem>
+  <MenuItem>
+   <ItemSpecialMenu>0</ItemSpecialMenu>
+   <ItemName>EditCut</ItemName>
+   <ItemText>Cu&amp;t</ItemText>
+   <ItemIndex>-2147483648</ItemIndex>
+   <ItemShortcut>Cmd+X</ItemShortcut>
+   <MenuShortcut>X</MenuShortcut>
+   <MenuShortcutModifier>1</MenuShortcutModifier>
+   <MenuAutoEnable>1</MenuAutoEnable>
+   <TextEncoding>134217984</TextEncoding>
+   <MenuItemVisible>1</MenuItemVisible>
+   <ItemFlags>0</ItemFlags>
+   <Superclass>MenuItem</Superclass>
+  </MenuItem>
+  <MenuItem>
+   <ItemSpecialMenu>0</ItemSpecialMenu>
+   <ItemName>EditCopy</ItemName>
+   <ItemText>&amp;Copy</ItemText>
+   <ItemIndex>-2147483648</ItemIndex>
+   <ItemShortcut>Cmd+C</ItemShortcut>
+   <MenuShortcut>C</MenuShortcut>
+   <MenuShortcutModifier>1</MenuShortcutModifier>
+   <MenuAutoEnable>1</MenuAutoEnable>
+   <TextEncoding>134217984</TextEncoding>
+   <MenuItemVisible>1</MenuItemVisible>
+   <ItemFlags>0</ItemFlags>
+   <Superclass>MenuItem</Superclass>
+  </MenuItem>
+  <MenuItem>
+   <ItemSpecialMenu>0</ItemSpecialMenu>
+   <ItemName>EditPaste</ItemName>
+   <ItemText>&amp;Paste</ItemText>
+   <ItemIndex>-2147483648</ItemIndex>
+   <ItemShortcut>Cmd+V</ItemShortcut>
+   <MenuShortcut>V</MenuShortcut>
+   <MenuShortcutModifier>1</MenuShortcutModifier>
+   <MenuAutoEnable>1</MenuAutoEnable>
+   <TextEncoding>134217984</TextEncoding>
+   <MenuItemVisible>1</MenuItemVisible>
+   <ItemFlags>0</ItemFlags>
+   <Superclass>MenuItem</Superclass>
+  </MenuItem>
+  <MenuItem>
+   <ItemSpecialMenu>0</ItemSpecialMenu>
+   <ItemName>EditClear</ItemName>
+   <ItemText>#App.kEditClear</ItemText>
+   <ItemIndex>-2147483648</ItemIndex>
+   <ItemShortcut></ItemShortcut>
+   <MenuAutoEnable>1</MenuAutoEnable>
+   <TextEncoding>134217984</TextEncoding>
+   <MenuItemVisible>1</MenuItemVisible>
+   <ItemFlags>0</ItemFlags>
+   <Superclass>MenuItem</Superclass>
+  </MenuItem>
+  <MenuItem>
+   <ItemSpecialMenu>0</ItemSpecialMenu>
+   <ItemName>EditSeparator2</ItemName>
+   <ItemText>-</ItemText>
+   <ItemIndex>-2147483648</ItemIndex>
+   <ItemShortcut></ItemShortcut>
+   <MenuAutoEnable>1</MenuAutoEnable>
+   <TextEncoding>134217984</TextEncoding>
+   <MenuItemVisible>1</MenuItemVisible>
+   <ItemFlags>0</ItemFlags>
+   <Superclass>MenuItem</Superclass>
+  </MenuItem>
+  <MenuItem>
+   <ItemSpecialMenu>0</ItemSpecialMenu>
+   <ItemName>EditSelectAll</ItemName>
+   <ItemText>Select &amp;All</ItemText>
+   <ItemIndex>-2147483648</ItemIndex>
+   <ItemShortcut>Cmd+A</ItemShortcut>
+   <MenuShortcut>A</MenuShortcut>
+   <MenuShortcutModifier>1</MenuShortcutModifier>
+   <MenuAutoEnable>1</MenuAutoEnable>
+   <TextEncoding>134217984</TextEncoding>
+   <MenuItemVisible>1</MenuItemVisible>
+   <ItemFlags>0</ItemFlags>
+   <Superclass>MenuItem</Superclass>
+  </MenuItem>
+ </MenuItem>
+</block>
+<block type="BuildAutomation" ID="897083391">
+ <ObjName>Build Automation</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+</block>
+<block type="BuildStepsList" ID="1467394047">
+ <ObjName>Linux</ObjName>
+ <ObjContainerID>897083391</ObjContainerID>
+</block>
+<block type="BuildProjectStep" ID="652376063">
+ <ObjName>Build</ObjName>
+ <ObjContainerID>1467394047</ObjContainerID>
+</block>
+<block type="BuildStepsList" ID="188585983">
+ <ObjName>Mac OS X</ObjName>
+ <ObjContainerID>897083391</ObjContainerID>
+</block>
+<block type="BuildProjectStep" ID="1811750911">
+ <ObjName>Build</ObjName>
+ <ObjContainerID>188585983</ObjContainerID>
+</block>
+<block type="BuildStepsList" ID="2102265855">
+ <ObjName>Windows</ObjName>
+ <ObjContainerID>897083391</ObjContainerID>
+</block>
+<block type="BuildProjectStep" ID="114632703">
+ <ObjName>Build</ObjName>
+ <ObjContainerID>2102265855</ObjContainerID>
+</block>
+<block type="UIState" ID="0">
+ <StudioWindowState>
+  <EditBounds><Rect left="-1445" top="260" width="1204" height="574"/></EditBounds>
+  <WindowMaximized>0</WindowMaximized>
+  <Editors>
+   <EditorCount>1</EditorCount>
+   <Editor>
+    <EditorIndex>0</EditorIndex>
+    <EditorLocation>Window1.Controls.Canvas1.Paint</EditorLocation>
+    <EditorPath></EditorPath>
+    <EditingPartID>44965887</EditingPartID>
+    <EditorPath></EditorPath>
+   </Editor>
+   <SelectedTab>0</SelectedTab>
+  </Editors>
+ </StudioWindowState>
+</block>
+</RBProject>
