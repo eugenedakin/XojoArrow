@@ -14,4 +14,6 @@ Sub Paint(g As Graphics, areas() As REALbasic.Rect) Handles Paint
   DrawArrow(g,5, 5, 100, 100, 2, &c11CCDD)
 End Sub
 
+![](https://github.com/eugenedakin/XojoArrow/blob/master/ArrowDemo.png)
+
 This was created with Xojo 2019 r1.1 on 17 Sept 2019
